@@ -1,3 +1,4 @@
+-- Examples of manulay inserting values 
 INSERT INTO story (title, alt_title, summary, complete, chapter_number, page_count) values
 ('Doku Doku Mori Mori', 'Poisin Poisn Forest Forest', 'Living mushrooms wage war', 'False', 33, NULL);
 
