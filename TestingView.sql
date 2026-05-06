@@ -10,8 +10,10 @@ on sau.author_id = a.author_id;
 
 Create View Title_Tag AS
 SELECT  s.title, t.tag_id, t.tag_name, s.story_id
-FROM tags t
-LEFT JOIN story_tag_composite STC
-on t.tag_id = STC.tag_id
-LEFT JOIN story s
+FROM story s
+FULL JOIN story_tag_composite STC
 on s.story_id = STC.story_id
+FULL JOIN 
+tags t
+on t.tag_id = STC.tag_id
+select * From title_tag;

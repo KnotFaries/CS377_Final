@@ -60,14 +60,14 @@ end; $$;
 
 CREATE OR REPLACE PROCEDURE tag_to_story(
 	p_story_id INT,
-	p_author_id INT)
+	p_tag_id INT)
 
 language plpgsql
 as $$
 begin
 
-	INSERT INTO story_tag_composite (story_id, author_id) values
-	(p_story_id, p_author_id);
+	INSERT INTO story_tag_composite (story_id, tag_id) values
+	(p_story_id, p_tag_id);
 
 end; $$;
 

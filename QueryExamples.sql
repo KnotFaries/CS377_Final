@@ -1,3 +1,8 @@
+SELECT * FROM story Order BY(story_id) DESC;
+SELECT * FROM author Order BY(author_id) DESC;
+SELECT * FROM title_authorname_table ORDER BY (title);
+SELECT * FROM title_tag where story_id = 42;
+
 -- Use to search for key terms in titles
 SELECT * FROM title_authorname_table where title LIKE '%Bless%';
 
@@ -13,4 +18,8 @@ SELECT distinct user_name FROM title_authorname_table;
 SELECT source, COUNT(story_id) FROM story GROUP BY (source);
 SELECT * FROM title_authorname_table where author_id = 3;
 
+-- Use of Avg, Disintc, Count, Group By and Order By
 SELECT AVG(tag_count) FROM (SELECT DISTINCT tag_name, COUNT(tag_id) as Tag_Count FROM title_tag GROUP BY (Tag_name) ORDER BY (tag_count)DESC);
+
+-- Concat
+SELECT Concat(title,' by ', user_name) from title_authorname_table;
