@@ -16,6 +16,7 @@ SELECT * FROM author Order BY(author_id) ;
 SELECT distinct user_name FROM title_authorname_table;
 
 SELECT source, COUNT(story_id) FROM story GROUP BY (source);
+SELECT user_name, COUNT(story_id) FROM title_authorname_table GROUP BY (user_name);
 SELECT * FROM title_authorname_table where author_id = 3;
 
 -- Use of Avg, Disintc, Count, Group By and Order By
