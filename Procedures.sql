@@ -81,3 +81,5 @@ DELETE FROM Author WHERE author_id = 83;
 call tag_to_story (story, tag)
 
 Call NewStory (283, 'The Hogfather', 'Novel', 3)
+
+SELECT * FROM title_tag where story_id = 283;

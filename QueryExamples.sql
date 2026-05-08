@@ -23,3 +23,14 @@ SELECT AVG(tag_count) FROM (SELECT DISTINCT tag_name, COUNT(tag_id) as Tag_Count
 
 -- Concat
 SELECT Concat(title,' by ', user_name) from title_authorname_table;
+
+SELECT * FROM story Order BY(story_id) DESC;
+SELECT * FROM author Order BY(author_id) DESC;
+SELECT * FROM title_authorname_table ORDER BY (title);
+SELECT * FROM title_tag where story_id = 42;
+
+
+SELECT * FROM title_authorname_table where title LIKE '%One%';
+SELECT * FROM title_tag where tag_name LIKE '%Sho%';
+
+SELECT * FROM title_tag where story_id = 60;
