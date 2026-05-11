@@ -6,6 +6,10 @@ Created on Fri May  8 09:28:35 2026
 """
 
 f = open('story_list.txt')
+out = []
 for x in f:
-    print ("'"+x[:-8] +"',")
+    c= x[:-1] 
+    out.append(c)
 f.close()
+
+print(out)
